@@ -18,7 +18,9 @@ public class Activity7_2 {
 
         WebElement username= driver.findElement(By.xpath("//input[contains(@class,'-username')]"));
         WebElement Password= driver.findElement(By.xpath("//input[contains(@class,'-password')]"));
-        WebElement confirmpassword= driver.findElement(By.xpath("/html/body/div[2]/div/div[2]/div[2]/div/div[3]/div/div/div[3]/input"));
+        WebElement confirmpassword = driver.findElement(By.xpath("//label[text() = 'Confirm Password']/following::input[@type='password']"));
+    	
+        //WebElement confirmpassword= driver.findElement(By.xpath("/html/body/div[2]/div/div[2]/div[2]/div/div[3]/div/div/div[3]/input"));
         WebElement email= driver.findElement(By.xpath("//input[@type='email']"));
         
         username.sendKeys("DurgaK");
