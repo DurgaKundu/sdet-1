@@ -10,8 +10,8 @@ Scenario: Open the Leads page and add multiple lead accounts using values passed
     And Close CRM2 browser
     
   Examples:
-    | FName    | LName    |  
-    | Madhabii       | Kund     | 
-    | Sami     | Prad     | 
-    | Rohi     | Kumr     | 
-    | Mitth    | Ro       |
+    | FName     | LName    |  
+    | Madhh     | Kund     | 
+    | Samii     | Prad     | 
+    | Rohii     | Kumr     | 
+    | Mitthee   | Ro       |

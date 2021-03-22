@@ -51,22 +51,13 @@ public class AlchemyCRM2 {
    @Then("^Navigate to the View Leads page to see \"(.*)\" and \"(.*)\" result$") 	
 	public void Validate_new(String FName,String LName) throws Throwable 	{
 		Thread.sleep(2000);
-		driver.findElement(By.xpath("//ul/li[3]/a/div[2]")).click();
+		//driver.findElement(By.xpath("//ul/li[3]/a/div[2]")).click();
+		driver.findElement(By.partialLinkText("View Leads")).click();
 		Thread.sleep(2000);
         String newName= driver.findElement(By.xpath("//tbody/tr[1]/td[3]/b/a")).getText();
-        Assert.assertEquals(FName  + LName, newName);
+        Assert.assertEquals(FName+" "+ LName, newName);
 		
-        /*for(int i=1; i<=4; i++) {
-		
-    	List<WebElement> myElements = driver.findElements(By.xpath("//tbody/tr[i]/td[3]/b/a"));
-    	for(WebElement e : myElements) {
-    	  System.out.println(e.getText());
-    	  
-    	  //e.contains(FName);
-    	}
-       }
-	*/
-    	
+       
 
   }
 	@And("^Close CRM2 browser$")
